@@ -26,12 +26,30 @@ public class SettingScreenController {
 
     @FXML
     void actNewAccount(MouseEvent event) {
-    	System.out.println("actNewAccount");
+    	BorderPane incomeScreen;
+		try {
+			incomeScreen = (BorderPane) FXMLLoader.load(getClass().getResource("../view/SettingSubScreenNewAccount.fxml"));
+			ObservableList nodes = ancMainPane.getChildren();
+			ancMainPane.getChildren().removeAll(nodes);
+			ancMainPane.getChildren().add(incomeScreen);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     @FXML
     void actAccountInfo(MouseEvent event) {
-    	System.out.println("actAccountInfo");
+    	BorderPane incomeScreen;
+		try {
+			incomeScreen = (BorderPane) FXMLLoader.load(getClass().getResource("../view/SettingSubScreenUpdateAccount.fxml"));
+			ObservableList nodes = ancMainPane.getChildren();
+			ancMainPane.getChildren().removeAll(nodes);
+			ancMainPane.getChildren().add(incomeScreen);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     @FXML

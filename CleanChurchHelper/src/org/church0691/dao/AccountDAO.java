@@ -29,7 +29,12 @@ public class AccountDAO implements IDAO<Account, String>  {
 		pstmt.setString(2, vo.getBank());
 		pstmt.setString(3, vo.getName());
 		pstmt.setLong(4, vo.getPrice());
-		pstmt.setString(5, vo.getInfo());
+		
+		if(vo.getInfo()==null || vo.getInfo().equals("")) {
+			pstmt.setNull(5, Types.VARCHAR);
+		}else {
+			pstmt.setString(5, vo.getInfo());
+		}
 		
 		int res = pstmt.executeUpdate();
 		if(conn != null) conn.close();
@@ -89,7 +94,7 @@ public class AccountDAO implements IDAO<Account, String>  {
 
 	@Override
 	public List<Account> selectAll(Connection conn) throws Exception {
-		String sql = "SELECT ACC_NO, ACC_BANK, ACC_NAME, ACC_PRICE, ACC_INFO FORM ACCOUNT ";
+		String sql = "SELECT ACC_NO, ACC_BANK, ACC_NAME, ACC_PRICE, ACC_INFO FROM ACCOUNT";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 		List<Account> list = new ArrayList<>();

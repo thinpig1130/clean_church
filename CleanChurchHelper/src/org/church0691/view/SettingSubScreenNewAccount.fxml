@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="651.0" prefWidth="988.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.church0691.controller.NewAccountController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="새로운 계좌 등록" />
+            <HBox prefHeight="36.0" prefWidth="988.0">
+               <children>
+                  <Label text="계좌번호" />
+                  <TextField fx:id="txtAccountNo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="988.0">
+               <children>
+                  <Label text="은행명" />
+                  <TextField fx:id="txtAccountBank" />
+               </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="988.0">
+               <children>
+                  <Label text="계좌별칭" />
+                  <TextField fx:id="txtAccountNickname" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="계좌정보" />
+                  <TextArea fx:id="txtaAccountInfo" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="988.0">
+               <children>
+                  <Button fx:id="btnRegisteAccount" mnemonicParsing="false" onAction="#actClickRegistBtn" text="등록" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
