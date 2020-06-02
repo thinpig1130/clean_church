@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="584.0" prefWidth="764.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.church0691.controller.StartFormController">
+   <center>
+      <VBox prefHeight="584.0" prefWidth="648.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="000 시스템을 시작합니다." />
+            <TextField fx:id="txtStMemNo" promptText="식별코드" />
+            <TextField fx:id="txtStMemName" promptText="관리자 이름" />
+            <TextField fx:id="txtStMemId" promptText="사용할 ID" />
+            <TextField fx:id="txtStMemPw" promptText="비밀번호" />
+            <TextField fx:id="txtStMemPwCheck" promptText="비밀번호 확인" />
+            <TextField fx:id="txtStMemPhone" promptText="전화번호" />
+            <TextField fx:id="txtStMemAdd" promptText="주소" />
+            <Button fx:id="btnStart" mnemonicParsing="false" onAction="#btnStartRegiste" text="시작하기" />
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #A5CC82;" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>

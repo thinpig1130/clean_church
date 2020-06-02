@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="651.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.church0691.controller.SettingScreenController">
+   <left>
+      <Accordion prefHeight="651.0" prefWidth="176.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" prefHeight="605.0" prefWidth="141.0" text="계정관리">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="581.0" prefWidth="163.0">
+                     <children>
+                        <VBox layoutX="39.6" layoutY="24.6" prefHeight="200.0" prefWidth="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="2.0">
+                           <children>
+                              <Label fx:id="labIncome" onMouseClicked="#actIncomeClick" text="수입계정관리">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="labExpense" onMouseClicked="#actExpenseClick" text="지출계정관리">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="계좌관리">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="50.0" layoutY="53.0" prefHeight="200.0" prefWidth="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="2.0">
+                           <children>
+                              <Label fx:id="labNewAccount" onMouseClicked="#actNewAccount" text="새로운 계좌 등록">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="labAccountInfo" onMouseClicked="#actAccountInfo" text="계좌정보 조회/수정">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="labAccountBalance" onMouseClicked="#actAccountBalance" text="계좌 잔액 관리">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="기타 환경 설정">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <center>
+      <AnchorPane fx:id="ancMainPane" prefHeight="651.0" prefWidth="988.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

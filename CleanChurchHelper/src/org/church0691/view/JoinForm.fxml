@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="VboxJoinForm" alignment="CENTER" prefHeight="529.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.church0691.controller.JoinFormController">
+   <children>
+      <Label text="MEMBER 가입" textFill="#00467f">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField fx:id="txtJoinName" maxWidth="500.0" promptText="NAME (이름)">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtJoinId" maxWidth="500.0" onKeyReleased="#ActionChangedId" onZoomFinished="#ActionChangedId" promptText="ID (아이디)">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <HBox alignment="TOP_RIGHT" maxWidth="500.0" prefHeight="30.0" prefWidth="423.0">
+         <children>
+            <Label fx:id="labCheckMessage" text="ID를 사용할 수 있는지 확인 해야 합니다." textFill="#800505">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Label>
+            <Button fx:id="btnCheckJoinId" mnemonicParsing="false" onAction="#actionCheckJoinId" text="중복확인">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Button>
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </HBox>
+      <PasswordField fx:id="txtJoinPassword" maxWidth="500.0" promptText="PASSWORD (비밀번호)">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <PasswordField fx:id="txtJoinPasswordCheck" maxWidth="500.0" promptText="PASSWORD 확인">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </PasswordField>
+      <TextField fx:id="txtJoinPhone" maxWidth="500.0" promptText="PHONE (전화번호)">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <TextField fx:id="txtJoinAddress" maxWidth="500.0" promptText="ADDRESS(주소)">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </TextField>
+      <Button fx:id="btnJoinRequest" mnemonicParsing="false" onAction="#actionJoinRequest" text="가입요청" />
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.church0691.controller.MatchingMemberController">
+   <left>
+      <VBox prefHeight="500.0" prefWidth="306.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="가입 요청" />
+            <TableView fx:id="tableRequestMem" onMouseClicked="#actSelectRequestMem" prefHeight="500.0" prefWidth="299.0">
+              <columns>
+                <TableColumn fx:id="colRequestName" prefWidth="75.0" text="이름" />
+                <TableColumn fx:id="colRequestPhone" prefWidth="75.0" text="전화번호" />
+                  <TableColumn fx:id="colRequestAdd" prefWidth="75.0" text="주소" />
+                  <TableColumn fx:id="colRequestId" prefWidth="75.0" text="ID" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="500.0" prefWidth="304.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="매칭 멤버 선택 ( ID가 없는 사용자 )" />
+            <TableView fx:id="tableMem" onMouseClicked="#actSelectMachingMem" prefHeight="485.0" prefWidth="312.0">
+              <columns>
+                <TableColumn fx:id="colMemNo" prefWidth="75.0" text="식별번호" />
+                <TableColumn fx:id="colMemName" prefWidth="75.0" text="이름" />
+                  <TableColumn fx:id="colMemPhone" prefWidth="75.0" text="전화번호" />
+                  <TableColumn fx:id="colMemAdd" prefWidth="75.0" text="주소" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="290.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="매칭정보" />
+            <HBox prefHeight="31.0" prefWidth="290.0">
+               <children>
+                  <Label text="ID" />
+                  <TextField fx:id="txtMachId" />
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="290.0">
+               <children>
+                  <Label text="식별번호" />
+                  <TextField fx:id="txtMachMemNo" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="290.0">
+               <children>
+                  <Label text="요청 된 정보로 등록" />
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="290.0">
+               <children>
+                  <Label text="이름" />
+                  <TextField fx:id="txtMachName" />
+                  <CheckBox fx:id="checkMachName" mnemonicParsing="false" onAction="#actClickNameCheckbox" />
+               </children>
+            </HBox>
+            <HBox prefHeight="34.0" prefWidth="290.0">
+               <children>
+                  <Label text="전화번호 " />
+                  <TextField fx:id="txtMachPhone" />
+                  <CheckBox fx:id="checkMachPhone" mnemonicParsing="false" onAction="#actClickPhoneCheckbox" />
+               </children>
+            </HBox>
+            <HBox prefHeight="78.0" prefWidth="290.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label text="주소" />
+                        <TextArea fx:id="txtaMachAdd" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="checkMachAdd" mnemonicParsing="false" onAction="#actClickAddCheckbox" />
+               </children>
+            </HBox>
+            <Button fx:id="btnMachSubmit" mnemonicParsing="false" onAction="#actMaching" text="요청 승인" />
+         </children>
+      </VBox>
+   </right>
+</BorderPane>

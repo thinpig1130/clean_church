@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane prefHeight="651.0" prefWidth="988.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.church0691.controller.ExpenseTitleController">
+   <top>
+      <Label text="지출계정관리" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <TableView fx:id="tableExpenseTitle" onMouseClicked="#actClickExpense" prefHeight="636.0" prefWidth="230.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colExpenseTitleNo" prefWidth="75.0" text="계정번호" />
+          <TableColumn fx:id="colExpenseTitle" prefWidth="75.0" text="계정분류" />
+            <TableColumn fx:id="colExpenseSubTitle" prefWidth="75.0" text="계정이름" />
+        </columns>
+      </TableView>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="계정정보" />
+            <HBox prefHeight="33.0" prefWidth="758.0">
+               <children>
+                  <Label text="계정번호" />
+                  <TextField fx:id="txtExpenseTitleNum" />
+               </children>
+            </HBox>
+            <HBox prefHeight="31.0" prefWidth="758.0">
+               <children>
+                  <Label text="계정분류" />
+                  <TextField fx:id="txtExpenseTitle" />
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="758.0">
+               <children>
+                  <Label text="계정이름" />
+                  <TextField fx:id="txtExpenseSubTitle" />
+               </children>
+            </HBox>
+            <HBox fx:id="hboxAllBtn" prefHeight="41.0" prefWidth="758.0">
+               <children>
+                  <Button fx:id="btnExpenseTitleInsert" mnemonicParsing="false" onAction="#actClickInsertBtn" text="입력" />
+                  <Button fx:id="btnExpenseTitleUpdate" mnemonicParsing="false" onAction="#actClickUpdateBtn" text="수정" />
+                  <Button fx:id="btnExpenseTitleDelete" mnemonicParsing="false" onAction="#actClickDeleteBtn" text="삭제" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

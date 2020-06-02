@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="651.0" prefWidth="1190.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.church0691.controller.MemberManagementController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1190.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="멤버관리" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="583.0">
+               <children>
+                  <Button fx:id="btnPulsMem" mnemonicParsing="false" onAction="#actPulsMem" text="멤버+" />
+                  <Button fx:id="btnMinusMem" mnemonicParsing="false" onAction="#actMinusMem" text="멤버-" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="583.0">
+               <children>
+                  <ComboBox fx:id="comboSearchAuth" prefWidth="150.0" promptText="권한" />
+                  <TextField fx:id="txtSearchName" promptText="이름" />
+                  <Button fx:id="btnSearch" mnemonicParsing="false" text="검색" />
+                  <Button fx:id="btnViewAll" mnemonicParsing="false" onAction="#actViewAllMem" text="전체보기" />
+               </children>
+            </HBox>
+            <TableView fx:id="tableMember" onMouseClicked="#actSelectMem" prefHeight="375.0" prefWidth="583.0">
+              <columns>
+                <TableColumn fx:id="colMemNo" prefWidth="75.0" text="식별코드" />
+                <TableColumn fx:id="colMemName" prefWidth="75.0" text="이름" />
+                  <TableColumn fx:id="colMemPhone" prefWidth="75.0" text="전화번호" />
+                  <TableColumn fx:id="colMemAddress" prefWidth="75.0" text="주소" />
+                  <TableColumn fx:id="colMemRemark" prefWidth="75.0" text="비고" />
+                  <TableColumn fx:id="colAuthName" prefWidth="75.0" text="권한" />
+                  <TableColumn fx:id="colMemId" prefWidth="75.0" text="ID" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="583.0">
+               <children>
+                  <Label fx:id="labRequestJoin" onMouseClicked="#actViewRequestJoin" prefHeight="19.0" prefWidth="233.0" textFill="#7c0505">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <VBox alignment="TOP_CENTER" prefHeight="601.0" prefWidth="607.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labFormTitle" text="새로운 MEMBER  등록">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="27.0" prefWidth="607.0">
+               <children>
+                  <Label text="식별코드" />
+                  <TextField fx:id="txtMemNo" />
+               </children>
+            </HBox>
+            <HBox prefHeight="33.0" prefWidth="607.0">
+               <children>
+                  <Label text="이름" />
+                  <TextField fx:id="txtMemName" />
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="607.0">
+               <children>
+                  <Label text="전화번호" />
+                  <TextField fx:id="txtMemPhone" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="33.0" text="주소" />
+                  <TextArea fx:id="txtaMemAddress" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="607.0">
+               <children>
+                  <Label text="비고" />
+                  <TextField fx:id="txtMemRemark" />
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="607.0">
+               <children>
+                  <Label text="권한" />
+                  <ComboBox fx:id="comboAuthName" prefWidth="150.0" />
+                  <Button fx:id="btnAuthPlus" mnemonicParsing="false" onAction="#actClickAuthPlus" text="설정" />
+               </children>
+            </HBox>
+            <Button fx:id="btnFormSubmit" mnemonicParsing="false" onAction="#actSubmitForm" text="등록" />
+         </children></VBox>
+   </right>
+</BorderPane>
