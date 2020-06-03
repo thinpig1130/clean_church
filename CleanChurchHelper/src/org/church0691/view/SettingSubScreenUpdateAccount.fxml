@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane prefHeight="651.0" prefWidth="988.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.church0691.controller.AccountNicknameController">
+<BorderPane prefHeight="651.0" prefWidth="988.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.church0691.controller.AccountNicknameController">
    <top>
       <Label text="계좌 별칭 관리" BorderPane.alignment="CENTER" />
    </top>
@@ -20,4 +19,12 @@
         </columns>
       </TableView>
    </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labSaveMsg" text="수정된 내용이 없습니다." textFill="SEAGREEN" />
+            <Button fx:id="btnSaveAccount" mnemonicParsing="false" onAction="#actClickSaveBtn" text="저장" />
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

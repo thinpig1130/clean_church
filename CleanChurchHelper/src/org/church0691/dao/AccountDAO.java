@@ -65,7 +65,6 @@ public class AccountDAO implements IDAO<Account, String>  {
 		}else {
 			pstmt.setString(4, vo.getInfo());
 		}
-		
 		pstmt.setString(5, vo.getNo());
 		
 		int res = pstmt.executeUpdate();
